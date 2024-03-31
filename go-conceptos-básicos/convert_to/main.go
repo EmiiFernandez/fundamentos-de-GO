@@ -110,7 +110,8 @@ func main() {
 	strFloatVar, err := strconv.ParseFloat("-11.2", 64) //("valor str", "tamaño")
 	fmt.Printf("type: %T, value %f, err: %v \n", strFloatVar, strFloatVar, err)
 
-	strFloatVar2, err := strconv.ParseFloat("A", 64) //("valor str", "tamaño")
+	//Error
+	strFloatVar2, err := strconv.ParseFloat("A", 64)
 	fmt.Printf("type: %T, value %f, err: %v \n", strFloatVar2, strFloatVar2, err)
 
 }
