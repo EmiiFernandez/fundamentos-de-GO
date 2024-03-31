@@ -8,7 +8,7 @@
 
 3. **Integración con Spring Cloud**: Familiarizarse con la integración de microservicios desarrollados en GO en soluciones basadas en Spring Cloud, explorando aspectos de concurrencia y paralelismo.
 
-## Contenidos del Curso
+## Contenidos 
 
 ### Fundamentos del lenguaje GO
 - Sintaxis básica de GO, variables, constantes y operadores.
