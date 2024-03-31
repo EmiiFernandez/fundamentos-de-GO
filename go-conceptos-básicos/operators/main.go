@@ -34,7 +34,7 @@ func main() {
 
 	fmt.Println(`
 	******************* Validaciones *******************
-`)
+	`)
 
 	yearsOld := 33
 	fmt.Println("El valor a validar es: ", yearsOld)
