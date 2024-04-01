@@ -62,6 +62,26 @@ func Calc(op Operation, x, y float64) (float64, error) {
 	return 0, errors.New("Ha ocurrido un error")
 }
 
+// recibe un valor, retorna multiples valores (se definen entre "()")
+func Split(v int) (x, y int) {
+	x = v * 4 / 8
+	y = v - x
+
+	return //No necesitamos especificar por que ya están especificados.
+	//retornará x e y (los tenemos definidos arriba)
+}
+
+// Sumatoria de varios valores
+// ...float64 --> internamente se maneja como si fuese un array de floats
+// ...float64 siempre tiene que estar al final
+func MSum(values ...float64) float64 {
+	var sum float64
+	for _, v := range values {
+		sum += v
+	}
+	return sum
+}
+
 /* PRIVADO
 func display(myValue int64) {
 	fmt.Println()

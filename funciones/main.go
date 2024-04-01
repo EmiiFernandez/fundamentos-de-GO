@@ -72,4 +72,20 @@ func main() {
 	value6, err := function.Calc(function.TEST, 20.12, 34)
 	fmt.Println("Test error - value: ", value6, " - error: ", err)
 
+	fmt.Println(`
+	******************* Función que recibe un valor retorna dos variables *******************
+	`)
+
+	xVal, yVal := function.Split(40)
+	fmt.Println("Valor x: ", xVal, "Valor y: ", yVal)
+
+	fmt.Println(`
+	******************* Función que suma x valores *******************
+	`)
+
+	val2 := function.MSum(1, 2, 3, 1, 2, 3, 4)
+	fmt.Println(val2)
+
+	val3 := function.MSum(1, 2, 3, 1, 2, 3, 4, 90, 100)
+	fmt.Println(val3)
 }
