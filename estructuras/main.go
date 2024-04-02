@@ -127,4 +127,19 @@ func main() {
 
 	//Imprimir precio total
 	fmt.Printf("Total Car: $ %.2f \n", car.Total())
+
+	/*
+		Format
+		go fmt es una herramienta en Go (Golang) que se utiliza para formatear automáticamente el código fuente de tus programas según las convenciones de estilo establecidas por la comunidad Go. Su objetivo es mantener la coherencia y la legibilidad del código al aplicar un formato uniforme a lo largo de tu proyecto. Aquí tienes una explicación sobre cómo usar go fmt y por qué es útil:
+		Uso de go fmt
+		Instalación de Go: Asegúrate de tener Go instalado en tu sistema. Si no lo tienes, puedes descargarlo desde el sitio oficial de Go (https://golang.org/dl/).
+		Ubicación del código: Abre una terminal y navega hasta el directorio que contiene tu código Go.
+		Ejecución de go fmt: Ejecuta el siguiente comando en la terminal:
+		notion image
+		El ./... indica que go fmt formateará todos los archivos en todos los subdirectorios dentro del directorio actual.
+		Verificación del resultado
+		: Una vez que
+		go fmt
+		haya terminado, podrás ver los cambios realizados en tus archivos. Los archivos que necesitaban formateo se actualizarán automáticamente con el estilo de formato Go estándar.
+	*/
 }
