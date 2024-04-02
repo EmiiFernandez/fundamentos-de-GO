@@ -115,7 +115,7 @@ func main() {
 	// Imprimir el nombre y el precio de los productos comprados
 	fmt.Println("Productos comprados:")
 	for _, product := range car.Products {
-		fmt.Printf("Nombre: %s, Precio: $%.2f, Cantidad: %d\n", product.Name, product.Price, product.Count)
+		fmt.Printf("**Nombre: %s, Precio: $%.2f, Cantidad: %d\n", product.Name, product.Price, product.Count)
 	}
 
 	//Imprimir cantidad total de productos comprados

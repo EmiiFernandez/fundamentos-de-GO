@@ -7,24 +7,22 @@ Estructuras que simularan un carrito de compras
 //Estructuras
 
 type Product struct {
-	ID    uint8    `json: "id"`
-	Name  string   `json: name"`
-	Type  Type     `json: "type"`
-	Count uint16   `json: "count"`
-	Price float64  `json: "price"`
-	Tags  []string `json: "tags"`
+	ID    uint8    `json:"id"`
+	Name  string   `json:"name"`
+	Type  Type     `json:"type"`
+	Count uint16   `json:"count"`
+	Price float64  `json:"price"`
+	Tags  []string `json:"tags"`
 }
-
 type Type struct {
-	ID          uint8  `json: "id"`
-	Code        string `json: code"`
-	Description string `json: "description"`
+	ID          uint8  `json:"id"`
+	Code        string `json:"code"`
+	Description string `json:"description"`
 }
-
 type Car struct {
-	ID       uint      `json: "id"`
-	UserID   uint      `json: user_id"`
-	Products []Product `json: products"`
+	ID       uint      `json:"id"`
+	UserID   uint      `json:"user_id"`
+	Products []Product `json:"products"`
 }
 
 //Metodos
