@@ -9,7 +9,7 @@ type Operation int // Defino un tipo de dato que será representado por un int
 
 // Generamos un Enum utilizando el tipo de dato Operation que será un int
 const (
-	SUM Operation = iota
+	SUM Operation = iota //Operaciones
 	SUB
 	DIV
 	MUL
@@ -80,6 +80,32 @@ func MSum(values ...float64) float64 {
 		sum += v
 	}
 	return sum
+}
+
+// Combinar funciones
+func MOperations(op Operation, values ...float64) (float64, error) {
+
+	if len(values) == 0 {
+		return 0, errors.New("No existen valores")
+	}
+	sum := values[0]
+
+	for _, v := range values[1:] {
+		switch op {
+		case SUM:
+			sum += v
+		case SUB:
+			sum -= v
+		case DIV:
+			if v == 0 {
+				return 0, errors.New("El valor no puede ser cero")
+			}
+			sum /= v
+		case MUL:
+			sum *= v
+		}
+	}
+	return sum, nil
 }
 
 /* PRIVADO

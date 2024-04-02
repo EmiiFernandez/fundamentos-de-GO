@@ -88,4 +88,37 @@ func main() {
 
 	val3 := function.MSum(1, 2, 3, 1, 2, 3, 4, 90, 100)
 	fmt.Println(val3)
+
+	fmt.Println(`
+	******************* Función combinada *******************
+	`)
+
+	mOperVal, err := function.MOperations(function.SUM, 4, 4, 4, 4, 10, 80)
+	fmt.Println("SUMA: value: ", mOperVal, " - error: ", err)
+	mOperVal2, err := function.MOperations(function.SUB, 4, 4, 4, 80)
+	fmt.Println("RESTA: value: ", mOperVal2, " - error: ", err)
+	mOperVal3, err := function.MOperations(function.MUL, 4, 4, 10, 80, 6)
+	fmt.Println("MULTIPLICACIÓN: value: ", mOperVal3, " - error: ", err)
+	mOperVal4, err := function.MOperations(function.DIV, 4, 4, 4, 4, 10, 80)
+	fmt.Println("DIVISIÓN: value: ", mOperVal4, " - error: ", err)
+	mOperVal5, err := function.MOperations(function.DIV, 0, 0)
+	fmt.Println("DIVISIÓN por 0: value: ", mOperVal5, " - error: ", err)
+
+	fmt.Println(`
+	******************* Función factory *******************
+	`)
+
+	factOpFunc := function.FactoryOperation(function.SUM)
+	fmt.Println("SUMA: ", factOpFunc(10, 15))
+	factOpFuncSub := function.FactoryOperation(function.SUB)
+	fmt.Println("RESTA: ", factOpFuncSub(10, 15))
+	factOpFuncDiv := function.FactoryOperation(function.DIV)
+	fmt.Println("DIVISIÓN: ", factOpFuncDiv(10, 15))
+	factOpFuncDiv0 := function.FactoryOperation(function.DIV)
+	fmt.Println("DIVISIÓN x 0: ", factOpFuncDiv0(10, 0))
+	factOpFuncMul := function.FactoryOperation(function.MUL)
+	fmt.Println("MULTIPLICACIÓN: ", factOpFuncMul(10, 15))
+	factOpFuncMulAll := function.FactoryOperation(function.MUL)(100, 15)
+	fmt.Println("MULTIPLICACIÓN: ", factOpFuncMulAll)
+
 }
