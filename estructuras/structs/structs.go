@@ -23,6 +23,7 @@ Ej:
 
 Si la primera letra del nombre de la estructura es mayúscula será pública
 si es minúscula será privado
+
 */
 
 type Person struct {
@@ -31,4 +32,19 @@ type Person struct {
 	Address string
 	DNI     string
 	Gender  string
+}
+
+/*Dentro de las estructuras podemos utilizar Tags (etiquetas)  los cuales se utilizan para agregar una definición en un campo. Uno de los tags más utilizado es el json
+
+Los campos que comiencen en mayúscula serán públicos.
+*/
+
+type User struct {
+	ID       int    `json:"id"`
+	Name     string `json:"name"`
+	Address  string `json:"address,omitempty"`
+	Age      uint8  `json:"age,omitempty"`
+	LastName string `json:"last_name"`
+
+	//omitempty --> al pasarlo al JSON hace que los datos vacios no se muestren
 }

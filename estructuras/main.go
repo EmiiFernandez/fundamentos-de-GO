@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/json"
 	"estructuras/structs"
 	"fmt"
 )
@@ -30,4 +31,28 @@ func main() {
 	fmt.Println("Dirección:", person.Address)
 	fmt.Println("DNI:", person.DNI)
 	fmt.Println("Género:", person.Gender)
+
+	fmt.Println(`
+	******************* Tags & JSON *******************
+	`)
+
+	user := structs.User{
+		ID:       123,
+		Name:     "Nahuel",
+		LastName: "García",
+	}
+
+	fmt.Println(user)
+
+	fmt.Println(`
+	******************* encoding/json *******************
+	`)
+
+	/*
+		Marshal retorna una cadena de bytes
+	*/
+	v, err := json.Marshal(user)
+	fmt.Println(err)
+	fmt.Println(v)         // v--> retorna la cadena de bytes
+	fmt.Println(string(v)) //Conversión de bytes a string. Formato JSON
 }

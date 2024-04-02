@@ -63,4 +63,19 @@ func main() {
 
 	myBoolVar2 := true
 	fmt.Println("My variable is: ", myBoolVar2)
+
+	/*
+			Convenciones para nombrar elementos
+
+		Existen algunas convenciones que podemos utilizar para nombrar variables, funciones y otros elementos en la programación.
+		*Camel Case: las palabras se escriben juntas sin espacios y cada palabra después de la primera comienza con una letra mayúscula (excepto la primera palabra).
+		Ejemplo: miVariableEjemplo o calcularSalarioNeto
+		*Snake Case: las palabras se escriben en mayúsculas y se separan mediante guiones bajos (underscore).
+		Ejemplo: mi_variable_ejemplo o calcular_salario_neto
+		Pascal Case: Es similar a Camel Case, pero en lugar de comenzar con una letra mayúscula, la primera letra de cada palabra se inicia en mayúscula.
+		Ejemplo: MiVariableEjemplo o CalcularSalarioNeto
+		*Kebab Case: las palabras se escriben en minúsculas y se separan mediante guiones. Aunque no es tan común en la programación, se usa en ciertos contextos, especialmente en la definición de la URLs y nombres de archivos web.
+		Ejemplo:
+		mi-variable-ejemplo o calcular-salario-neto
+	*/
 }
