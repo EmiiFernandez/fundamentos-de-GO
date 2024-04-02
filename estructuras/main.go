@@ -2,6 +2,7 @@ package main
 
 import (
 	"encoding/json"
+	"estructuras/commerce"
 	"estructuras/structs"
 	"fmt"
 )
@@ -66,4 +67,64 @@ func main() {
 	//Modificar nombre del usuario
 	user.SetName("Azul")
 	user.Display()
+
+	fmt.Println(`
+	******************* Ejemplo Commerce *******************
+	`)
+
+	//Creo producto que lleva el usuario
+	p1 := commerce.Product{
+		Name:  "Heladera marca sarasa",
+		Price: 200000,
+		Type: commerce.Type{
+			Code:        "A",
+			Description: "Electrodomestico",
+		},
+		Tags:  []string{"heladera", "freezer", "sarasa", "refrigerador"},
+		Count: 5,
+	}
+
+	p2 := commerce.Product{
+		Name:  "Naranja",
+		Price: 50,
+		Type: commerce.Type{
+			Code:        "B",
+			Description: "Alimento",
+		},
+		Tags:  []string{"alimento", "fruta"},
+		Count: 20,
+	}
+
+	p3 := commerce.Product{
+		Name:  "Cortina",
+		Price: 6000,
+		Type: commerce.Type{
+			Code:        "C",
+			Description: "Hogar",
+		},
+		Tags:  []string{"hogar", "cortina"},
+		Count: 3,
+	}
+
+	//Creo el carrito de compras
+	car := commerce.NewCar(11312)
+	//Agrego productos al carrito
+	car.AddProducts(p1, p2, p3)
+
+	fmt.Println("PRODUCTS CAR")
+	// Imprimir el nombre y el precio de los productos comprados
+	fmt.Println("Productos comprados:")
+	for _, product := range car.Products {
+		fmt.Printf("Nombre: %s, Precio: $%.2f, Cantidad: %d\n", product.Name, product.Price, product.Count)
+	}
+
+	//Imprimir cantidad total de productos comprados
+	var total uint16
+	for _, product := range car.Products {
+		total += product.Count
+	}
+	fmt.Println("Total products: ", total)
+
+	//Imprimir precio total
+	fmt.Printf("Total Car: $ %.2f \n", car.Total())
 }
