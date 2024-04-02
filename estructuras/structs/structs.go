@@ -1,5 +1,10 @@
 package structs
 
+import (
+	"encoding/json"
+	"fmt"
+)
+
 /*
 Las estructuras son un conjunto de campos ("variables")
 y pueden contener metódos
@@ -45,6 +50,26 @@ type User struct {
 	Address  string `json:"address,omitempty"`
 	Age      uint8  `json:"age,omitempty"`
 	LastName string `json:"last_name"`
-
-	//omitempty --> al pasarlo al JSON hace que los datos vacios no se muestren
 }
+
+//omitempty --> al pasarlo al JSON hace que los datos vacios no se muestren
+
+//Agrego metódos
+
+/*
+func (palabra reservada) ("variable que representa la estructura" "estructura") "nombre del metodo" {}
+*/
+func (u User) Display() {
+	v, err := json.Marshal(u)
+	fmt.Println(err)
+	fmt.Println(string(v))
+}
+
+// Metodo modificar nombre
+
+func (u *User) SetName(name string) {
+	u.Name = name
+}
+
+// Debemos agregar a la estructura un * (*User) para modificar la estructura original
+//Si no agrego el * solo se realizaría el cambio al ejecutar el metódo pero no la estructura original

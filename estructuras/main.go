@@ -55,4 +55,15 @@ func main() {
 	fmt.Println(err)
 	fmt.Println(v)         // v--> retorna la cadena de bytes
 	fmt.Println(string(v)) //Conversión de bytes a string. Formato JSON
+
+	fmt.Println(`
+	******************* Metodos *******************
+	`)
+
+	//Imprimo en formato JSON los datos de User
+	user.Display()
+
+	//Modificar nombre del usuario
+	user.SetName("Azul")
+	user.Display()
 }
