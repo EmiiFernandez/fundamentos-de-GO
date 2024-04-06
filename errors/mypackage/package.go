@@ -6,10 +6,10 @@ import "fmt"
 func Run() {
 	defer func() {
 		println("end my function") // Se ejecuta al final de la función
-		r := recover()             // Recupera cualquier pánico que ocurra dentro de la función
+		r := recover()             // Recupera cualquier pánic que ocurra dentro de la función
 		if r != nil {
 			fmt.Println("error in run: ", r) // Maneja y muestra el error recuperado
 		}
 	}()
-	panic("panic in run function") // Genera un pánico dentro de la función
+	panic("panic in run function") // Genera un pánic dentro de la función
 }
