@@ -1,8 +1,8 @@
 package main
 
 import (
+	"codigo/funciones/function"
 	"fmt"
-	"funciones/function"
 )
 
 func main() {

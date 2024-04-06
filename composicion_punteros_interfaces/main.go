@@ -1,9 +1,9 @@
 package main
 
 import (
-	"composicion_punteros_interfaces/interfaces"
-	"composicion_punteros_interfaces/interfaces/vehicles"
-	"composicion_punteros_interfaces/pointers"
+	"codigo/composicion_punteros_interfaces/interfaces"
+	"codigo/composicion_punteros_interfaces/interfaces/vehicles"
+	"codigo/composicion_punteros_interfaces/pointers"
 	"fmt"
 )
 
