@@ -59,3 +59,10 @@ func IncrementP(val *int) {
 	fmt.Println("Valor de val dentro de IncrementP:", *val)               // Imprime el valor de val (el valor al que apunta el puntero)
 	*val++                                                                // Incrementa el valor de la variable a la que apunta el puntero val
 }
+
+// Cuando se trabaja con slice se utilizan refrencias
+func UpdateSlice(v []int) {
+	fmt.Printf("address: %p \n", v)
+	fmt.Printf("addr1: %p, addr2: %p, addr3: %p \n", &v[0], &v[1], &v[2])
+	v[0] = 12
+}
