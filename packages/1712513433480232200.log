@@ -1,0 +1,12 @@
+success: 2024/04/07 15:10:33 main.go:173: test 1
+success: 2024/04/07 15:10:33 main.go:174: test 2
+success: 2024/04/07 15:10:33 main.go:175: test 3
+success: 2024/04/07 15:10:33 test 1
+success: 2024/04/07 15:10:33 test 2
+success: 2024/04/07 15:10:33 test 3
+success: test 1
+success: test 2
+success: test 3
+errors: 2024/04/07 15:10:33 main.go:188: test 1
+errors: 2024/04/07 15:10:33 main.go:189: test 2
+errors: 2024/04/07 15:10:33 main.go:190: test 3
