@@ -5,6 +5,8 @@ import (
 	"log" // Importar el paquete log para el manejo de logs
 	"os"
 	"time"
+
+	"github.com/google/uuid"
 )
 
 func main() {
@@ -192,4 +194,33 @@ func main() {
 	l4.Println("test 1")
 	l4.Println("test 2")
 	l4.Println("test 3")
+
+	fmt.Println(`
+	---------------- Package  externos ----------------
+	`)
+
+	//Debemos instalarlos
+	//Deben estar en un repositorio
+	//Podemos crear paquetes e importarlos en nuestra aplicación
+
+	//Paquete extero UUID
+
+	//Terminal: go get github.com/google/uuid
+
+	//El package genera id en formato
+	//Se utiliza mucho para id autogenerados
+	id1 := uuid.New()
+	fmt.Println(id1)
+
+	//Genera Id y lo pasa a formato string
+	id2 := uuid.New().String()
+	fmt.Println(id2)
+
+	id3 := uuid.NewString()
+	fmt.Println(id3)
+
+	uid := uuid.New()
+	p(uid.Version())
+	p(uid.String())
+
 }
