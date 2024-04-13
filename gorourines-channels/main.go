@@ -20,6 +20,7 @@ func main() {
 	---------------- SIN Goroutines ----------------
 	`)
 
+	// Ejecución secuencial de los procesos A y B
 	myProcess("A")
 	myProcess("B")
 
@@ -44,7 +45,7 @@ func main() {
 	go myProcess("A")
 	go myProcess("B")
 
-	// Creamos un canal (channel) para comunicarnos entre goroutines utilizando make(chan string)
+	// Creamos un canal (channel) para comunicarnos entre goroutines
 	myFirstChannel := make(chan string)
 
 	// Lanzamos una goroutine adicional que utiliza un canal para enviar datos
@@ -61,20 +62,23 @@ func main() {
 	---------------- Goroutines + 2 Channels ----------------
 	`)
 
+	// Creamos dos canales separados para comunicarnos con diferentes goroutines
 	channelA := make(chan string)
 	channelB := make(chan string)
 
+	// Lanzamos dos goroutines distintas, cada una usando su propio canal para enviar datos
 	go myProcessWithChannel("D", channelA)
 	go myOtherProcessWithChannel("E", channelB)
 
+	// Recibimos los resultados enviados por las goroutines usando los canales correspondientes
 	resultA := <-channelA
 	fmt.Println("A: ", resultA)
 	resultB := <-channelB
 	fmt.Println("B: ", resultB)
 
+	// Cerramos los canales después de usarlos
 	close(channelA)
 	close(channelB)
-
 }
 
 // La función myProcess simula un proceso que realiza alguna tarea
@@ -101,6 +105,8 @@ func myProcessWithChannel(p string, c chan string) {
 	c <- "ok"
 }
 
+// myOtherProcessWithChannel es otra función similar a myProcessWithChannel
+// Pero con una duración diferente para ilustrar el uso de múltiples canales con goroutines distintas
 func myOtherProcessWithChannel(p string, c chan string) {
 	i := 0
 	for i < 20 {
