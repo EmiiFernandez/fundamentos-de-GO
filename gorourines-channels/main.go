@@ -20,8 +20,8 @@ func main() {
 	---------------- SIN Goroutines ----------------
 	`)
 
-	//myProcess("A")
-	//myProcess("B")
+	myProcess("A")
+	myProcess("B")
 
 	//Se ejecuta ambos procesos en simultáneo mediante goroutines
 	fmt.Println(`
@@ -29,8 +29,8 @@ func main() {
 	`)
 
 	// Lanzamos dos goroutines concurrentes, cada una ejecutando la función myProcess
-	//go myProcess("A")
-	//go myProcess("B")
+	go myProcess("A")
+	go myProcess("B")
 
 	// Esperamos 3 segundos para que las goroutines tengan tiempo de ejecutarse
 	// En un programa real, este tiempo de espera podría variar dependiendo de las necesidades del programa
