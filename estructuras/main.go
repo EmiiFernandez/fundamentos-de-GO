@@ -1,9 +1,9 @@
 package main
 
 import (
+	"codigo/estructuras/commerce"
+	"codigo/estructuras/structs"
 	"encoding/json"
-	"estructuras/commerce"
-	"estructuras/structs"
 	"fmt"
 )
 
