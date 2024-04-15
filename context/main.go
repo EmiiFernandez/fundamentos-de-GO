@@ -11,9 +11,12 @@ func main() {
 	ctx := context.Background()
 
 	// Agregamos valores al contexto utilizando context.WithValue
-	ctx = context.WithValue(ctx, "my-key", "my value") // Agregar una cadena de texto
-	ctx = context.WithValue(ctx, "my-key-int", 5)      // agregar un entero
-	viewContext(ctx)                                   // Visualizar los valores del contexto
+	ctx = context.WithValue(ctx, "my-key", "my value")
+	// Agregar una cadena de texto
+	ctx = context.WithValue(ctx, "my-key-int", 5)
+	// agregar un entero
+	viewContext(ctx)
+	// Visualizar los valores del contexto
 
 	// Creamos un nuevo contexto con un límite de tiempo (timeout)
 	ctx2, cancel := context.WithTimeout(context.Background(), 5*time.Second)
