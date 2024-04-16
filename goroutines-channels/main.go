@@ -127,4 +127,6 @@ Se puede pensar como un conducto por el cual las goroutines pueden enviar y reci
 
 Son útiles en escenarios donde se necesita compartir datos entre goroutines de manera segura y eficiente, como la comunicación entre productores y consumidores, la implementación de patrones de concurrencia como el pool de workers, o la coordinación de tareas en un programa concurrente.
 
-La concurrencia en Go se logra principalmente mediante goroutines y canales. Las goroutines son funciones que se ejecutan de manera concurrente, mientras que los canales son medios de comunicación que permiten la sincronización y la transferencia de datos entre goroutine*/
+La concurrencia en Go se logra principalmente mediante goroutines y canales. Las goroutines son funciones que se ejecutan de manera concurrente, mientras que los canales son medios de comunicación que permiten la sincronización y la transferencia de datos entre goroutine
+
+Las goroutines te permiten ejecutar múltiples tareas de forma simultánea, mientras que los channels te permiten comunicar y sincronizar entre ellas. Al combinarlas, puedes crear programas eficientes, escalables y receptivos*/

@@ -61,12 +61,12 @@ Es una estructura que se utiliza para llevar valores y señales de cancelación 
 
 Aquí hay algunas situaciones en las que se utiliza un contexto:
 
-*Gestión de cancelación: se puede utilizar para cancelar operaciones en curso, como solicitudes HTTP, procesamiento de datos o acceso a recursos externos, cuando una operación superior o el usuario deciden que ya no son necesarias.
+*Gestión de cancelación: se puede utilizar para cancelar operaciones en curso, como solicitudes HTTP, procesamiento de datos o acceso a recursos externos, cuando una operación superior o el usuario deciden que ya no son necesarias.  Si una operación tarda demasiado tiempo, se puede cancelar usando el contexto.
 
 *Control de tiempo de espera: puede configurarse con un límite de tiempo para operaciones que deben completarse dentro de un plazo determinado. Si la operación no se completa dentro de este tiempo, el contexto se cancela automáticamente y se notifica a las partes interesadas.
 
-*Propagación de valores y datos: puede llevar valores asociados que pueden ser útiles para las operaciones que se realizan dentro de él. Estos valores se pueden utilizar para pasar información relevante a lo largo de una goroutines.
+*Propagación de valores y datos: puede llevar valores asociados que pueden ser útiles para las operaciones que se realizan dentro de él. Estos valores se pueden utilizar para pasar información relevante a lo largo de una goroutines. Se puede usar el contexto para pasar información adicional a una función, como el ID de un usuario o un identificador de solicitud.
 
-*Gestión de errores y comunicación entre goroutines: Los contextos proporcionan una manera estructurada de manejar errores y comunicarse entre goroutines. Pueden utilizarse para coordinar la terminación de múltiples goroutines y para propagar errores de manera eficiente.
+*Gestión de errores y comunicación entre goroutines: Los contextos proporcionan una manera estructurada de manejar errores y comunicarse entre goroutines. Pueden utilizarse para coordinar la terminación de múltiples goroutines y para propagar errores de manera eficiente. Se puede usar el contexto para rastrear el progreso de una solicitud a medida que pasa por diferentes partes del programa.
 
 */
